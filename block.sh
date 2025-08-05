@@ -8,5 +8,8 @@ echo "IP address of $domain is: $ip"
 
 # Block the ip
 echo "Blocking $ip using iptables..."
+
+sudo iptables -A INPUT -s "$ip" -j DROP
+sudo iptables -A OUTPUT -d "$ip" -j DROP
 sudo iptables -A OUTPUT -p icmp -d "$ip" -j DROP
 sudo iptables -A INPUT -p icmp -s "$ip" -j DROP
