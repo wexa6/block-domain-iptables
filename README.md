@@ -15,8 +15,11 @@ chmod +x block.sh
 Example:
 -------
 ./block.sh
+
 Enter a domain name: google.com
+
 IP address of google.com is: 142.251.37.206
+
 Blocking 142.251.37.206 using iptables...
 
 Notes:
